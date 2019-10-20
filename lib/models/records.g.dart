@@ -9,13 +9,13 @@ part of 'records.dart';
 Records _$RecordsFromJson(Map<String, dynamic> json) {
   return Records(
     id: json['_id'] as int,
-    quater: json['quater'] as String,
+    quarter: json['quarter'] as String,
     volumeOfMobileData: json['volume_of_mobile_data'] as String,
   );
 }
 
 Map<String, dynamic> _$RecordsToJson(Records instance) => <String, dynamic>{
       '_id': instance.id,
-      'quater': instance.quater,
+      'quarter': instance.quarter,
       'volume_of_mobile_data': instance.volumeOfMobileData,
     };

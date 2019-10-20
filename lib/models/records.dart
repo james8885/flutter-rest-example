@@ -6,11 +6,11 @@ part 'records.g.dart';
 class Records {
   @JsonKey(name: '_id')
   final int id;
-  final String quater;
+  final String quarter;
   @JsonKey(name: 'volume_of_mobile_data')
-  final String volumeOfMobileData;
+  final String volumeOfMobileData;  
 
-  Records({this.id, this.quater, this.volumeOfMobileData});
+  Records({this.id, this.quarter, this.volumeOfMobileData});
   
   factory Records.fromJson(Map<String, dynamic> json) => _$RecordsFromJson(json);
   Map<String, dynamic> toJson() => _$RecordsToJson(this);

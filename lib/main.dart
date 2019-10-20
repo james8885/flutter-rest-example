@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reactive_programming_sample/pages/MyHomePage.dart';
+import 'package:reactive_programming_sample/pages/MobileDataListing.dart';
 
 
 void main() => runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MobileDataListing(),
     );
   }
 }
