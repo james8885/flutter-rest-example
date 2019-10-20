@@ -5,7 +5,7 @@ import 'package:reactive_programming_sample/components/MobileDataList.dart';
 import 'package:reactive_programming_sample/models/getmobiledataresponse.dart';
 import 'package:reactive_programming_sample/models/mobiledata.dart';
 import 'package:reactive_programming_sample/models/records.dart';
-import 'package:reactive_programming_sample/webserviceproxy/mobile_data.dart';
+import 'package:reactive_programming_sample/webserviceproxy/mobile_data_proxy.dart';
 
 class MobileDataListing extends StatefulWidget {
   MobileDataListing({Key key}) : super(key: key);
@@ -50,7 +50,7 @@ class _MobileDataListingState extends State<MobileDataListing> {
 
   void _onLoading() async {
     try {
-      Getmobiledataresponse response = await getGovMobileDataUsage(offset);
+      Getmobiledataresponse response = await MobileDataProxy().getGovMobileDataUsage(offset);
       if (response.success) {
         oriRecordsList.addAll(response.result.records);
 
